@@ -11,7 +11,7 @@ import android.view.WindowManager;
 /**
  * 欢迎页，程序启动开始执行的第一个Activity
  */
-public class WeclomePage extends Activity {
+public class WeclomeActivity extends Activity {
 
     private static final int TIME = 2000;
     private static final int WELCOME = 1000;
@@ -65,16 +65,16 @@ public class WeclomePage extends Activity {
     }
     //程序启动直接通过欢迎页进入主程序
     private void goWelcome() {
-        Intent i = new Intent(WeclomePage.this, MainActivity.class);
+        Intent i = new Intent(WeclomeActivity.this, MainActivity.class);
         startActivity(i);
         finish();
 
     }
     //第一次安装此程序进入引导页后再进入到主程序
     private void goViewpage() {
-        Intent i = new Intent(WeclomePage.this, GuidePage.class);
+        Intent i = new Intent(WeclomeActivity.this, GuidePageActivity.class);
         startActivity(i);
-        WeclomePage.this.finish();
+        WeclomeActivity.this.finish();
 
     }
 }

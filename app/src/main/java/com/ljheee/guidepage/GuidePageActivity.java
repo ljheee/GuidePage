@@ -19,7 +19,7 @@ import java.util.List;
 /*
  * 引导页的activity
  */
-public class GuidePage extends Activity implements OnPageChangeListener{
+public class GuidePageActivity extends Activity implements OnPageChangeListener{
     private ViewPager vp;
     private VpageAdapter vad;//引导页图片适配器
     private List<View> views;
@@ -39,7 +39,7 @@ public class GuidePage extends Activity implements OnPageChangeListener{
         initPoints();
     }
     private void init() {
-        LayoutInflater inflate=LayoutInflater.from(GuidePage.this);
+        LayoutInflater inflate=LayoutInflater.from(GuidePageActivity.this);
         views=new ArrayList<View>();
         views.add(inflate.inflate(R.layout.guide_first, null));
         views.add(inflate.inflate(R.layout.guide_second, null));
@@ -52,7 +52,7 @@ public class GuidePage extends Activity implements OnPageChangeListener{
         intobutton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(GuidePage.this,MainActivity.class);
+                Intent i=new Intent(GuidePageActivity.this,MainActivity.class);
                 startActivity(i);
                 finish();
             }
