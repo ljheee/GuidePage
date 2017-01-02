@@ -33,6 +33,7 @@ public class VpageAdapter extends PagerAdapter{
         ((ViewPager)container).removeView(views.get(position));
     }
 
+    //增加视图
     @Override
     public Object instantiateItem(View container, int position) {
 
